@@ -1,0 +1,30 @@
+@startuml
+
+Entry <-- PromptGenerator
+Journal <-- Entry
+
+
+class Journal{
+List<Entry> _entries
+
+void AddEntry()
+void DisplayEntries()
+void SaveFile()
+void LoadFile()
+}
+
+class Entry{
+string _response
+string _date
+string _mood
+
+void DisplayPrompt()
+}
+
+class PromptGenerator{
+List<string> _promptList
+
+string GetPrompt()
+}
+
+@enduml

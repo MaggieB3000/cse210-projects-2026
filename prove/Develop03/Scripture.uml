@@ -1,0 +1,40 @@
+@startuml
+
+Scripture *-- Reference
+Scripture *-- Word
+
+Class Scripture
+{
+-_text: List<Word>
+-_refrence: Reference
+
++GetRenderedText(): string
++HideWords(): void
++IsCompletelyHidden(): bool
+}
+
+Class Reference
+{
+-_book: string
+-_chapter: string
+-_verse: string
+-_endVerse: string
+
++<<constructor>> Reference(string _book, string _chapter, string _verse)
++<<constructor>> Reference(string _book, string _chapter, string _verse, string _endVerse)
+
++DisplayReference(): string
+}
+
+Class Word
+{
+- _text: string
+-_isHidden: bool
+
++ Hide(): void
++ Show(): void
++ IsHidden(): bool
++ GetRenderedText(): string
+}
+
+@enduml
