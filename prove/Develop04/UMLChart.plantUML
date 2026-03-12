@@ -1,0 +1,51 @@
+@startuml
+Activity <|-- Breathing
+Activity <|-- Reflection
+Activity <|-- Listing
+
+Class Main
+{
++Menu():void
+}
+
+Class Activity
+{
+-_name: string
+-_description: string
+-_endMessage: string
+-_promptList: List<string>
+-_duration: int
+-_animaionCharacterList: List<string>
+
++GetName(): string
++GetDescription(): string
++GetEndMessage():string
++GetPromtList(): List<string>
++SetDuration(int seconds): void
++GetDuration(): int
++Timer():void
++DisplayIntro(string name, string description): void
++DisplayEnding(string endMessage): void
++PickRandomPrompt(List<string> list):string
++Animation(int duration, List<string> animationCharacterList): void
+}
+
+Class Breathing 
+{
++BreathingActivity(int duration)(): void
+}
+
+Class Reflection
+{
+-_questionList: List<string>
+
++GetQuestionList(): List<string>
++Reflection(): void
+}
+
+Class Listing
+{
++ListingActivity():void
+}
+
+@enduml
