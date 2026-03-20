@@ -1,0 +1,55 @@
+@startuml
+
+Goal *-- SimpleGoal
+Goal *-- EternalGoal
+Goal *-- ChecklistGoal
+
+
++class Menu
+{
++Menu(): void
+}
+
++abstract class Goal
+{
+-_goalName: string
+-_goalDescription: string
+-_points: int
+-_totalPoints: int
+-_goalsList: List<Goal>
+-_completedNumber: int
+
++CreateNewGoal(): Goal
++ListGoals(List<Goal>): void
++SaveGoals(): void
++LoadGoals(): List<Goal>
++RecordEvent(): void
++SetGoalName: void
++SetGoalDescription: void
++SetPoints: void
++DisplayTotalPoints: void
+}
+
++class SimpleGoal
+{
+
+}
+
++class EternalGoal
+{
+
+}
+
++class ChecklistGoal
+{
+-_finishedNumber: int
+-_bonus: int
+
++GetFinishedNumber(): int
++GetBonus(): int
++SetFinishedNumber(): void
++SetBonus(): void
+
+}
+
+@enduml
