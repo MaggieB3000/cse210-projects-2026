@@ -1,0 +1,5 @@
+0,600,Super Unicorn Ninja
+1,Test Simple Goal,This is a test of the simple goal,100,True
+2,Test Eternal Goal,This is a test of the eternal goal,50,False,0
+3,Test Checklist Goal,This is a test of the checklist goal,50,False,4,0,100
+1,Skadoodler 5000,A goal of grand proportions,500,True

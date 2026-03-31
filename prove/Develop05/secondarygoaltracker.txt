@@ -1,0 +1,5 @@
+0,250,Mid-Tier Person
+1,Test Simple Goal,This is a test of a simple goal,100,True
+2,Test Eternal Goal,This is a test of a eternal goal,50,False,1
+3,Test Checklist Goal,This is a test of the checklist goal,50,False,4,2,100
+1,Secondary Test Simple Goal,This is a second test of the simple goal,150,False

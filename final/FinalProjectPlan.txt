@@ -1,0 +1,10 @@
+Final Project Plan
+Margaret Binns
+
+a) I will be completing the "Foundation Four" option for the final project.
+
+b) Foundation Four Descriptions:
+    1) Abstraction with YouTube Videos: This program will store the information about videos and their comments, including the title, author, and length of each video. Comments include the name of the commentor and the text of the comment.
+    2) Encapsulation with Online Ordering: This program will create a packing label and shipping label, as well as computing the final price for billing. It will keep track of customers, their order, the products in their order, and the customer's address. 
+    3) Inheritance with Event Planning: This program creates marketing messages about three types of events: Lectures, Receptions, and Outdoor gatherings. There are three types of messages for each type of event: standard details, full details, and a short description.
+    4) Polymorphism with Exercise Tracking: This program wil track the date and length of three types of physical activities: running, cycling, and swimming. It will also keep track of the running distance, cycling speed, and the number of laps swum. With this info, the program will calculate the distance, speed, and pace and put it all into a summary.
