@@ -1,0 +1,92 @@
+@startuml "Foundation 3"
+Event <-- Lecture
+Event <-- Reception
+Event <-- OutdoorGathering
+
+class Main
+{
+
+}
+
+class Event
+{
+-_title: string
+-_description: string
+-_date: string
+-_time: string
+-_address: Address
+
++Event(title: string, description: string, date: string, time: string, address: Address)
+
++getTitle(): string
++setTitle(title: string): void
++getDescription(): string
++setDescription(description: string): void
++getDate(): string
++setDate(date: string): void
++getTime(): string
++setTime(time: string): void
++getAddress(): Address
++setAddress(address: Address): void
+
++StandardDetails(): string
++FullDetails(): string
++ShortDescription(): string
+
+}
+
+class Lecture
+{
+-_speaker: string
+-_capacity: int
+
++Lecture(title: string, description: string, date: string, time: string, address: Address, speaker: string, capacity: int)
+
++getSpeaker(): string
++setSpeaker(speaker: string): void
++getCapacity(): int
++setCapacity(capacity: int): void
+}
+
+class Reception
+{
+-_registerEmail: string
+
++Reception(title: string, description: string, date: string, time: string, address: Address, registerEmail: string)
+
++getRegisterEmail(): string
++setRegisterEmail(registerEmail: string): void
+}
+
+class OutdoorGathering
+{
+-_weather: string
+
++OutdoorGathering(title: string, description: string, date: string, time: string, address: Address, weather: string)
+
++getWeather(): string
++setWeather(weather: string): void
+}
+
+class Address
+{
+-_street: string
+-_city: string
+-_state: string
+-_country: string
+
++Address(street: string, city: string, state: string, country: string)
+
++getStreet(): string
++setStreet(street: string): void
++getCity(): string
++setCity(city: string): void
++getState(): string
++setState(state: string): void
++getCountry(): string
++setCountry(country: string): void
+
++FormatedAddress(): string
+}
+
+@enduml

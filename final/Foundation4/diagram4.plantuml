@@ -1,0 +1,68 @@
+@startuml "Foundation 4"
+
+Activity <-- Running
+Activity <-- Cycling
+Activity <-- Swimming
+
+
+class main
+{
+
+}
+
+abstract Activity
+{
+-_date: string
+-_length: int
+
++getDate(): string
++setDate(date: string): void
++getLength(): int
++setLength(length: int): void
+
++abstract Distance(): string
++abstract Speed(): string
++abstract Pace(): string
++abstract Summary(): string
+}
+
+class Running
+{
+-_distance: int
+
++getDistance(): int
++setDistance(distance: int): void
+
++override Distance(): string
++override Speed(): string
++override Pace(): string
++override Summary(): string
+}
+
+class Cycling
+{
+-_speed: int
+
++getSpeed(): int
++setSpeed(speed: int): void
+
++override Distance(): string
++override Speed(): string
++override Pace(): string
++override Summary(): string
+}
+
+class Swimming
+{
+-_laps: int
+
++getLaps(): int
++setLaps(laps: int): void
+
++override Distance(): string
++override Speed(): string
++override Pace(): string
++override Summary(): string
+}
+
+@enduml

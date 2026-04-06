@@ -1,0 +1,60 @@
+@startuml
+
+class Main
+{
+
+}
+
+class UserInterface
+{
+-_videos: List<Video>
+
++UserInterface()
+
++GetVideos(): List<Video>
++SetVideos(): void
+
++Menu(): void
++AddVideo(): void
++AddVideoComments(): void
++DisplayVideos(): void
+}
+
+class Video
+{
+-_title: string
+-_author: string
+-_lenth: int
+-_comments: List<Comment>
+
++Video(string title, string author, int length)
+
++GetTitle(): string
++SetTitle(): void
++GetAuthor(): string
++SetAuthor(): void
++GetLength(): int
++SetLength(): void
++GetComments(): List<Comment>
++SetComments(): void
+
++NewComment(): void
++NumberOfComments(): int
+}
+
+class Comment
+{
+-_name: string
+-_text: string
+
++Comment(string name, string text)
+
++GetName(): string
++SetName(): void
++GetText(): string
++SetText(): void
+
+
+}
+
+@enduml

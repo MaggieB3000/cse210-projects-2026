@@ -1,0 +1,108 @@
+@startuml "foundation 2"
+
+class Main
+{
+
+}
+
+class UserInterface
+{
+-_allProducts: List<Product>
+-_orders: List<Order>
+-_customers: List<Customer>
+
++UserInterface()
+
++GetAllProducts(): List<Product>
++SetAllProducts(List<Product> allProducts): void
++GetOrders(): List<Order>
++SetOrders(List<Order> orders): void
++GetCustomers(): List<Customer>
++SetCustomers(List<Customer> customers): void
+
++Menu(): void
+
++AddProduct(): void
++NewOrder(): void
++EditOrder(): void
++DisplayOrders(): void
++DisplayOrderLabel(): void
++DisplayAllProducts(): void
++Save(): void
++Load(): void
+}
+
+class Order
+{
+-_customer: Customer
+-_products: List<Product>
+
++Order(Customer customer, List<Product> products)
++Order(Customer customer)
+
++GetCustomer(): Customer
++SetCustomer(Customer customer): void
++GetProducts(): List<Product>
++SetProducts(List<Product> products): void
+
++AddProduct(Product product): void
++CalculateCost(): double
++PackingLabel(): string
++ShippingLabel(): string
+}
+
+class Product
+{
+-_name: string
+-_productID: int
+-_pricePerUnit: double
+-_quantity: int
+
++Product(string name, int productID, double pricePerUnit, int quantity)
++Product(string name, int productID, double pricePerUnit)
+
++GetName(): string
++SetName(string name): void
++GetProductID(): int
++SetProductID(int id): void
++GetPricePerUnit(): double
++SetPricePerUnit(double price): void
++GetQuantity(): int
++SetQuantity(int quantity): void
+
++TotalCost(): double
+}
+
+class Customer
+{
+-_name: string
+-_address: Address
+
++Customer(string name, Address address)
+
++GetName(): string
++SetName(string name): void
++GetAddress(): Address
++SetAddress(Address address): void
++IsInUSA(): bool
+}
+
+class Address
+{
+-_streetAddress: string
+-_city: string
+-_state: string
+-_country: string
+
++GetStreetAddress(): string
++SetStreetAddress(string streetAddress): void
++GetCity(): string
++SetCity(string city): void
++GetState(): string
++SetState(string state): void
++GetCountry(): string
++SetCountry(string country): void
++DisplayAddress(): string
+}
+
+@enduml
